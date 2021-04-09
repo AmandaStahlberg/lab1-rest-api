@@ -6,17 +6,17 @@ const products = [
     {
         id: 1,
         type: 'Tröja',
-        size: 'M'
+        //size: 'M'
     },
     {
         id: 2,
         type: 'Byxa',
-        size: 'L'
+        //size: 'L'
     },
     {
         id: 3,
         type: 'Hoodie',
-        size: 'S'
+        //size: 'S'
     }
 ]
 
@@ -36,13 +36,33 @@ app.get("/api/:id", (req, res) => {
     })
 
     if(!foundProduct) {
-        res.json({"Error": "Tröjan du söker finns inte." })
+        res.json({"Error": "Det finns ingen produkt med detta id." })
     }
     
     res.json(foundProduct)
 })
 
+app.post("/api", (req, res) => {
+    if(!req.body.type) {
+        res.json({"Error": "Kan inte hitta typen."})
+        return
+    }
+    const typeToSave = req.body.type
 
+    let newIdToSave = 0
+    for(const product of products) {
+        newIdToSave = product.id
+    }
+    newIdToSave++
+
+    products.push({
+        id: newIdToSave,
+        type: typeToSave
+    })
+    res.json({
+        status: "En ny produkt är tillagd."
+    })
+})
 
 app.listen(port, () => {
     console.log(`Server is on http://localhost:${port}`)
