@@ -1,25 +1,29 @@
 GET http://localhost:3000/api/products
 ###
 
-GET http://localhost:3000/api/products/1
+GET http://localhost:3000/api/products/139
 ###
 
 POST http://localhost:3000/api/products
 Content-Type: application/json
 
 {
-    "type": "Klänning"
+    "type": "Klänning",
+    "size": "XL",
+    "color": "Gul"
 }
 ###
-PUT http://localhost:3000/api/products/1
+PUT http://localhost:3000/api/products/5
 Content-Type: application/json
 
 {
-    "type": "kjol"
+    "type": "kjol",
+    "size": "SX",
+    "color": "Lila"
 }
 ###
 
-DELETE http://localhost:3000/api/products/1
+DELETE http://localhost:3000/api/products/2
 ###
 
 
