@@ -80,17 +80,8 @@ app.put("/api/products/:id", (req, res) => {
         return product.id == id
     })
 
-    // let newIdToSave = 0
-    // for(const product of products) {
-    //     if(product.id > newIdToSave) {
-    //         newIdToSave = product.id
-    //     }
-    // }
-    // newIdToSave++
-
     if(foundProduct) {
         foundProduct.type = req.body.type
-        //foundProduct.id = newIdToSave
         foundProduct.size = req.body.size
         foundProduct.color = req.body.color
         res.status(200).json(foundProduct)
@@ -113,28 +104,9 @@ app.delete("/api/products/:id", (req, res) => {
     if(product.id == id) {
         products.splice(index, 1)
     }
-    res.json({"Denna produkt är borttagen!": product})
+    res.json(product)
 })
 
 app.listen(port, () => {
     console.log(`Server is on http://localhost:${port}`)
 })
-
-// kod som varit i delete4
-    // const index = products.findIndex(p => p.id == req.params.id)
-    // const deletedProduct = products.splice(index, 1)
-    // res.json(deletedProduct)
-
-
-    // IF SATS för att radera rätt produkt
-
-    // app.delete('/api/favoritesweets/:id', (req, res) => {
-    //     const index = myfavoritesweets.findIndex(p => p.id == p.id);
-    //     let deletedProduct = myfavoritesweets.splice(index, 1);
-        
-    //     if(!myfavoritesweets.id) {
-    //     res.status(404).json({"Error": "This sweet does not exist!"})
-    //     }
-        
-    //     res.json(deletedProduct);
-    //    });
