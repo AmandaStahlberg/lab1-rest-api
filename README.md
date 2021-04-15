@@ -15,4 +15,5 @@ Uppfyllda krav för uppgiften är alla G-krav:
 
 ## Kör programmet
 `npm i`
+
 `npm start`
