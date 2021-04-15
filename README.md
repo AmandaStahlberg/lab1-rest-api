@@ -9,6 +9,7 @@ Uppfyllda krav för uppgiften är alla G-krav:
 * Datan som API:et hanterar sparas lokalt i serverfilen
 * Git & GitHub har använts5.Projektmappen innehåller en README.md fil - (läs ovan för mer info)
 * Uppgiften lämnas in i tid!
+
 [länk till repot](https://github.com/AmandaStahlberg/lab1-rest-api)
 
 
