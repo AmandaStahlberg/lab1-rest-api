@@ -84,9 +84,12 @@ app.put("/api/products/:id", (req, res) => {
         foundProduct.type = req.body.type
         foundProduct.size = req.body.size
         foundProduct.color = req.body.color
-        res.status(200).json(foundProduct)
-    } else if(!foundProduct) {
+        res.json(foundProduct)
+        return
+    } 
+    if(!foundProduct) {
         res.status(404).json({"Error": "Det finns ingen produkt med detta id."})
+        return
     }
 })
 
@@ -97,14 +100,14 @@ app.delete("/api/products/:id", (req, res) => {
     })
 
     if(!product) {
-        res.status(404).json({"Error": "kan inte hitta rätt produkt"})
+        res.status(404).json({"Error": "Produkten du försöker radera finns inte."})
         return
     }
     const index = products.indexOf(product)
     if(product.id == id) {
         products.splice(index, 1)
     }
-    res.json(product)
+    res.json({"Du har tagit bort": product})
 })
 
 app.listen(port, () => {

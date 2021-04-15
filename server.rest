@@ -13,7 +13,8 @@ Content-Type: application/json
     "color": "Gul"
 }
 ###
-PUT http://localhost:3000/api/products/5
+
+PUT http://localhost:3000/api/products/2
 Content-Type: application/json
 
 {
@@ -23,7 +24,7 @@ Content-Type: application/json
 }
 ###
 
-DELETE http://localhost:3000/api/products/2
+DELETE http://localhost:3000/api/products/16
 ###
 
 
