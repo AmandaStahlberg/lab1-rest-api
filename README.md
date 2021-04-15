@@ -14,10 +14,8 @@ Uppfyllda krav för uppgiften är alla G-krav:
 
 
 ## Kör programmet
-installera dependencies:
-
+### installera dependencies:
 `npm i`
 
-starta programmet:
-
+### starta programmet:
 `npm start`
