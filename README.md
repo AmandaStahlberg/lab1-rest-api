@@ -7,7 +7,7 @@ Uppfyllda krav för uppgiften är alla G-krav:
 * Projektet innehåller minst 4 st. endpoints (GET, POST, PUT & DELETE för en resurs)
 * Samtliga endpoints skall kunna nås via en REST Client fil (.rest|.http)
 * Datan som API:et hanterar sparas lokalt i serverfilen
-* Git & GitHub har använts5.Projektmappen innehåller en README.md fil - (läs ovan för mer info)
+* Git & GitHub har använts5.Projektmappen innehåller en README.md fil.
 * Uppgiften lämnas in i tid!
 
 [länk till repot](https://github.com/AmandaStahlberg/lab1-rest-api)
